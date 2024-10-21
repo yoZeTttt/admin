@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard E-commerce tokopaedi mantap</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            height: 100vh;
+            background-color: #343a40;
+            color: white;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar h2 {
+            padding: 20px;
+            text-align: center;
+        }
+        .info-card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-2 sidebar d-flex flex-column">
+                <h2>E-Commerce Admin tokopaedi</h2>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="#" class="nav-link">Dashboard</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Produk</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Pesanan</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Pelanggan</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Laporan</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Pengaturan</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-10">
+                <div class="d-flex justify-content-between lign-items-center mt-3">
+                    <h1>Dashboard</h1>
+                    <span class="badge bg-primary">Admin Abid</span>
+                </div>
+
+                <!-- Info Cards -->
+                <div class="row mt-4">
+                    <div class="col-md-3">
+                        <div class="card text-bg-info info-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Pendapatan</h5>
+                                <p class="card-text">Rp 120.000.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-bg-success info-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Pesanan</h5>
+                                <p class="card-text">450 Pesanan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-bg-warning info-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Pelanggan</h5>
+                                <p class="card-text">320 Pelanggan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-bg-danger info-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Stok Rendah</h5>
+                                <p class="card-text">10 Produk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grafik -->
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Penjualan Bulanan</h5>
+                                <canvas id="salesChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Keuntungan Bulanan</h5>
+                                <canvas id="profitChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pesanan Terbaru -->
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Pesanan Terbaru</h5>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>ID Pesanan</th>
+                                    <th>Pelanggan</th>
+                                    <th>Status</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#00123</td>
+                                    <td>Budi</td>
+                                    <td><span class="badge bg-success">Selesai</span></td>
+                                    <td>Rp 1.200.000</td>
+                                </tr>
+                                <tr>
+                                    <td>#00124</td>
+                                    <td>Ani</td>
+                                    <td><span class="badge bg-warning">Dikirim</span></td>
+                                    <td>Rp 850.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
